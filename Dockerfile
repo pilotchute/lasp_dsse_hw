@@ -6,5 +6,5 @@ RUN conda install xarray scikit-image
 RUN git clone https://github.com/pilotchute/lasp_dsse_hw
 WORKDIR /home/jovyan/work/lasp_dsse_hw
 #commands below this point may become ENTRYPOINT
-ENTRYPOINT jupyter nbconvert --inplace --execute --to notebook lasp_dsse_hw.ipynb
+ENTRYPOINT jupyter nbconvert --execute --to pdf lasp_dsse_hw.ipynb --output data_external/lasp_dsse_hw
 #EXPOSE 8888
